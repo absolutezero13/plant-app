@@ -4,6 +4,8 @@ import Text from '../../components/Text';
 import { styles } from './Home.style';
 import InputArea from './views/InputArea';
 import FreePremium from './views/FreePremium';
+import useHomeData from '../../hooks/useHomeData';
+import Questions from './views/Questions';
 
 const getTimeText = () => {
   const date = new Date();
@@ -19,6 +21,13 @@ const getTimeText = () => {
 };
 
 const Home = () => {
+  const {
+    categories,
+    categoryPending,
+    questions,
+    questionsPending
+  } = useHomeData();
+
   return (
     <SafeAreaView style={styles.safeArea}>
       <View style={styles.headerWrapper}>
@@ -27,6 +36,7 @@ const Home = () => {
       </View>
       <InputArea />
       <FreePremium />
+      <Questions questions={questions} questionsPending={questionsPending} />
     </SafeAreaView>
   );
 };

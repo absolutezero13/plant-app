@@ -3,6 +3,8 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { OnBoardingStack } from './OnBoardingStack';
 import Welcome from '../screens/Welcome/Welcome';
 import { TabStack } from './TabNavigator';
+import WebView from '../screens/WebView/WebView';
+import { colors } from '../theme/colors';
 
 const Stack = createNativeStackNavigator();
 
@@ -31,6 +33,14 @@ const RootNavigation = () => {
           }}
           name='TabStack'
           component={TabStack}
+        />
+        <Stack.Screen
+          options={({ route }) => ({
+            headerTitle: route.params?.title,
+            headerTintColor: colors.main
+          })}
+          name='WebView'
+          component={WebView}
         />
       </Stack.Navigator>
     </NavigationContainer>

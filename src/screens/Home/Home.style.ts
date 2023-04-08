@@ -2,6 +2,10 @@ import { StyleSheet } from 'react-native';
 import { colors } from '../../theme/colors';
 import { Metrics } from '../../theme/metrics';
 
+const ORIGINAL_IMAGE_HEIGHT = 255;
+const ORIGINAL_IMAGE_WIDTH = 375;
+const ASPECT_RATIO = ORIGINAL_IMAGE_WIDTH / ORIGINAL_IMAGE_HEIGHT;
+
 export const styles = StyleSheet.create({
   safeArea: {
     flex: 1,
@@ -81,5 +85,36 @@ export const styles = StyleSheet.create({
   },
   arrow: {
     marginLeft: 'auto'
+  },
+  questionContainer: {
+    borderRadius: 15,
+    overflow: 'hidden'
+  },
+  questionBg: {
+    width: Metrics.SCREEN_WIDTH * 0.66,
+    aspectRatio: ASPECT_RATIO
+  },
+  questionText: {
+    marginBottom: 20,
+    color: colors.white,
+    fontWeight: '400',
+    fontSize: 15,
+    marginLeft: 10,
+    marginTop: 'auto'
+  },
+  questions: {
+    marginTop: 20
+  },
+  questionMl: {
+    marginLeft: Metrics.BASE_PADDING_HORIZONTAL
+  },
+  questionFlatList: {
+    marginTop: 10
+  },
+  questionFlatListContentContainer: {
+    paddingHorizontal: Metrics.BASE_PADDING_HORIZONTAL
+  },
+  separator: {
+    width: 10
   }
 });

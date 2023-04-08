@@ -1,0 +1,12 @@
+export const BASE_URL = 'https://dummy-api-jtg6bessta-ey.a.run.app';
+
+const constants = {
+  GET_QUESTIONS: 'GET_QUESTIONS',
+  GET_CATEGORIES: 'GET_CATEGORIES',
+  QUESTIONS_PENDING: 'QUESTIONS_PENDING',
+  QUESTIONS_ERROR: 'QUESTIONS_ERROR',
+  CATEGORIES_PENDING: 'CATEGORIES_PENDING',
+  CATEGORIES_ERROR: 'CATEGORIES_ERROR'
+};
+
+export default constants;
