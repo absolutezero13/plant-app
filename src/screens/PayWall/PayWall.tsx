@@ -8,7 +8,7 @@ import {
   View
 } from 'react-native';
 import { FlatList } from 'react-native-gesture-handler';
-import { useNavigation } from '@react-navigation/native';
+import { StackActions, useNavigation } from '@react-navigation/native';
 import { Metrics } from '../../theme/metrics';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { colors } from '../../theme/colors';
@@ -40,9 +40,16 @@ const PayWall = () => {
         style={styles.image}
       />
       <SafeAreaView style={styles.safeArea}>
-        <View style={styles.cross}>
-          <Cross />
-        </View>
+        <Pressable
+          onPress={() => navigation.dispatch(StackActions.replace('TabStack'))}
+          style={styles.cross}
+        >
+          <Cross
+            style={{
+              color: colors.white
+            }}
+          />
+        </Pressable>
         <View style={styles.featureContainer}>
           <Text style={styles.title}>
             <Text style={styles.bold}>Plant App</Text> Premium

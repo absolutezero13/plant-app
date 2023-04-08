@@ -2,6 +2,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { OnBoardingStack } from './OnBoardingStack';
 import Welcome from '../screens/Welcome/Welcome';
+import { TabStack } from './TabNavigator';
 
 const Stack = createNativeStackNavigator();
 
@@ -22,6 +23,14 @@ const RootNavigation = () => {
           }}
           name='OnBoardingStack'
           component={OnBoardingStack}
+        />
+        <Stack.Screen
+          options={{
+            headerShown: false,
+            gestureEnabled: false
+          }}
+          name='TabStack'
+          component={TabStack}
         />
       </Stack.Navigator>
     </NavigationContainer>
