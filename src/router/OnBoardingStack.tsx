@@ -1,6 +1,6 @@
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import OnBoarding from '../screens/OnBoarding';
-import PayWall from '../screens/PayWall';
+import OnBoarding from '../screens/OnBoarding/OnBoarding';
+import PayWall from '../screens/PayWall/PayWall';
 
 const Stack = createNativeStackNavigator();
 

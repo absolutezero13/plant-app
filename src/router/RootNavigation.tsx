@@ -1,7 +1,7 @@
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { OnBoardingStack } from './OnBoardingStack';
-import Welcome from '../screens/Welcome';
+import Welcome from '../screens/Welcome/Welcome';
 
 const Stack = createNativeStackNavigator();
 

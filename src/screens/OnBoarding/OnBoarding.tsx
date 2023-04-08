@@ -4,40 +4,12 @@ import FastImage from 'react-native-fast-image';
 import { FlatList } from 'react-native-gesture-handler';
 import { useNavigation } from '@react-navigation/native';
 
-import OnBoardingContainer from '../components/OnBoardingContainer';
-import { PrimaryButton } from '../components/PrimaryButton';
-import { colors } from '../theme/colors';
-import Onboarding1 from '../assets/images/onboarding-1.png';
-import Onboarding2 from '../assets/images/onboarding-2.png';
-import { Metrics } from '../theme/metrics';
-
-const ORIGINAL_IMAGE_HEIGHT = 1100;
-const ORIGINAL_IMAGE_WIDTH = 750;
-const ASPECT_RATIO = ORIGINAL_IMAGE_WIDTH / ORIGINAL_IMAGE_HEIGHT;
-
-const IMAGE_HEIGHT = Metrics.SCREEN_HEIGHT / 1.5;
-
-const onBoardingData = [
-  {
-    id: 0,
-    titleStart: 'Take a photo to ',
-    titleBold: 'identify',
-    titleEnd: ' the plant!',
-    image: Onboarding1,
-    onPress: () => {}
-  },
-  {
-    id: 1,
-    titleStart: 'Get plant ',
-    titleBold: 'care guides',
-    titleEnd: ' and tips!',
-    image: Onboarding2,
-    onPress: () => {}
-  },
-  {
-    id: 2
-  }
-];
+import OnBoardingContainer from '../../components/OnBoardingContainer';
+import { PrimaryButton } from '../../components/PrimaryButton';
+import { Metrics } from '../../theme/metrics';
+import { onBoardingData } from '../../utils/uiData';
+import { styles } from './OnBoarding.style';
+import { OnBoardingData } from '../../utils/types';
 
 const OnBoarding = () => {
   const flatListRef = useRef<FlatList>(null);
@@ -48,14 +20,10 @@ const OnBoarding = () => {
     flatListRef?.current?.scrollToIndex({ index: step });
   }, [step]);
 
-  const renderItem = ({ item }) => {
+  const renderItem = ({ item }: { item: OnBoardingData }) => {
     if (!item.image) return null;
     return (
-      <View
-        style={{
-          width: Metrics.SCREEN_WIDTH
-        }}
-      >
+      <View style={styles.item}>
         <View style={styles.headerWrapper}>
           <Text style={styles.text}>
             {item.titleStart}
@@ -119,42 +87,5 @@ const OnBoarding = () => {
     </OnBoardingContainer>
   );
 };
-
-const styles = StyleSheet.create({
-  flatList: {
-    flexGrow: 0
-  },
-  headerWrapper: {
-    paddingHorizontal: 20,
-    marginTop: 20
-  },
-  text: {
-    fontFamily: 'Rubik-SemiBold',
-    color: colors.primaryText,
-    fontSize: 28
-  },
-  textBold: {
-    fontFamily: 'Rubik-Bold'
-  },
-  image: {
-    justifyContent: 'flex-end',
-    height: IMAGE_HEIGHT,
-    aspectRatio: ASPECT_RATIO,
-    alignSelf: 'center'
-  },
-  dots: {
-    flexDirection: 'row',
-    justifyContent: 'center',
-    alignItems: 'center',
-    alignSelf: 'center',
-    zIndex: 5,
-    marginTop: 20
-  },
-  dot: {
-    borderRadius: 15,
-    backgroundColor: '#13231B40',
-    marginRight: 5
-  }
-});
 
 export default OnBoarding;
