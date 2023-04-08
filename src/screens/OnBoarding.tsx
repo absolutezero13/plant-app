@@ -93,7 +93,7 @@ const OnBoarding = () => {
         title='Continue'
         onPress={() => {
           if (step === 1) {
-            navigation.navigate('Home');
+            navigation.navigate('PayWall');
             return;
           }
           setStep(step => step + 1);

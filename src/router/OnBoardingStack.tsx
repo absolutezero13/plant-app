@@ -1,6 +1,6 @@
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import Welcome from '../screens/Welcome';
 import OnBoarding from '../screens/OnBoarding';
+import PayWall from '../screens/PayWall';
 
 const Stack = createNativeStackNavigator();
 
@@ -13,6 +13,13 @@ export const OnBoardingStack = () => {
         }}
         name='OnBoarding'
         component={OnBoarding}
+      />
+      <Stack.Screen
+        options={{
+          headerShown: false
+        }}
+        name='PayWall'
+        component={PayWall}
       />
     </Stack.Navigator>
   );
