@@ -5,6 +5,7 @@ import Welcome from '../screens/Welcome/Welcome';
 import { TabStack } from './TabNavigator';
 import WebView from '../screens/WebView/WebView';
 import { colors } from '../theme/colors';
+import { storage } from '../providers/storage';
 
 const Stack = createNativeStackNavigator();
 

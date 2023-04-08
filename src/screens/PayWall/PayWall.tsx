@@ -1,25 +1,19 @@
 import { useState } from 'react';
-import {
-  Image,
-  ImageBackground,
-  Pressable,
-  StyleSheet,
-  Text,
-  View
-} from 'react-native';
+import { ImageBackground, Pressable, Text, View } from 'react-native';
 import { FlatList } from 'react-native-gesture-handler';
-import { StackActions, useNavigation } from '@react-navigation/native';
-import { Metrics } from '../../theme/metrics';
 import { SafeAreaView } from 'react-native-safe-area-context';
+
+import { useNavigation } from '@react-navigation/native';
+import { Metrics } from '../../theme/metrics';
 import { colors } from '../../theme/colors';
 import { PrimaryButton } from '../../components/PrimaryButton';
 import PlantWithBg from '../../assets/images/plant-with-bg.png';
 import Cross from '../../assets/icons/cross.svg';
-import badge from '../../assets/images/badge.png';
 import { features, plans } from '../../utils/uiData';
 import { styles } from './PayWall.styles';
 import { FeatureCard } from './views/FeatureCard';
 import { Plan } from './views/Plan';
+import { STORAGE_KEYS, storage } from '../../providers/storage';
 
 const disclaimer =
   'After the 3-day free trial period you’ll be charged ₺274.99 per year unless you cancel before the trial expires. Yearly Subscription is Auto-Renewable';
@@ -32,6 +26,14 @@ const PayWall = () => {
     return <View style={styles.separator} />;
   };
 
+  const onCrossPress = () => {
+    storage.set(STORAGE_KEYS.USER_SEEN_ONBOARDING, true);
+    navigation.reset({
+      index: 0,
+      routes: [{ name: 'TabStack' }]
+    });
+  };
+
   return (
     <>
       <ImageBackground
@@ -39,11 +41,8 @@ const PayWall = () => {
         source={PlantWithBg}
         style={styles.image}
       />
-      <SafeAreaView style={styles.safeArea}>
-        <Pressable
-          onPress={() => navigation.dispatch(StackActions.replace('TabStack'))}
-          style={styles.cross}
-        >
+      <SafeAreaView style={styles.safeArea} edges={['top', 'left', 'right']}>
+        <Pressable onPress={onCrossPress} style={styles.cross}>
           <Cross
             style={{
               color: colors.white
@@ -80,7 +79,7 @@ const PayWall = () => {
             />
           ))}
           <PrimaryButton
-            onPress={() => {}}
+            onPress={onCrossPress}
             title='Try Free For 3 Days'
             style={{
               marginTop: 20

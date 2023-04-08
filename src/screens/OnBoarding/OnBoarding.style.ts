@@ -15,8 +15,8 @@ export const styles = StyleSheet.create({
     width: Metrics.SCREEN_WIDTH
   },
   headerWrapper: {
-    paddingHorizontal: 20,
-    marginTop: 20
+    paddingHorizontal: Metrics.BASE_PADDING_HORIZONTAL,
+    marginTop: 24
   },
   text: {
     fontFamily: 'Rubik-SemiBold',
@@ -38,7 +38,7 @@ export const styles = StyleSheet.create({
     alignItems: 'center',
     alignSelf: 'center',
     zIndex: 5,
-    marginTop: 20
+    marginTop: 24
   },
   dot: {
     borderRadius: 15,

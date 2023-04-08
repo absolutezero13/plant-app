@@ -7,7 +7,11 @@ const InputArea = () => {
   return (
     <View style={styles.inputAreaWrapper}>
       <Image source={inputBgImage} style={styles.inputImage} />
-      <TextInput placeholder='Search for plants' style={styles.textInput} />
+      <TextInput
+        placeholderTextColor={'#ddd'}
+        placeholder='Search for plants'
+        style={styles.textInput}
+      />
       <Search style={styles.searchIcon} />
     </View>
   );

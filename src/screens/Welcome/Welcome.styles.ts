@@ -14,7 +14,7 @@ export const styles = StyleSheet.create({
     flex: 1
   },
   headerWrapper: {
-    paddingHorizontal: 20,
+    paddingHorizontal: Metrics.BASE_PADDING_HORIZONTAL,
     marginTop: 20
   },
   image: {
@@ -34,14 +34,14 @@ export const styles = StyleSheet.create({
     fontFamily: 'Rubik-Regular',
     color: '#13231BB3',
     fontSize: 16,
-    marginTop: 10,
+    marginTop: 12,
     lineHeight: 22
   },
   bottomText: {
     fontFamily: 'Rubik-Regular',
     color: '#597165B2',
     marginHorizontal: Metrics.BASE_PADDING_HORIZONTAL,
-    marginTop: 10,
+    marginTop: 12,
     fontSize: 11,
     lineHeight: 15,
     textAlign: 'center',

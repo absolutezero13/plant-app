@@ -21,7 +21,7 @@ export const styles = StyleSheet.create({
   },
   cross: {
     alignSelf: 'flex-end',
-    marginRight: 10,
+    marginRight: 12,
     backgroundColor: 'rgba(0,0,0,0.4)',
     borderRadius: 15,
     alignItems: 'center',
@@ -42,7 +42,7 @@ export const styles = StyleSheet.create({
   subTitle: {
     fontSize: 17,
     color: colors.white,
-    marginTop: 10,
+    marginTop: 12,
     opacity: 0.7
   },
   flatList: {
@@ -87,12 +87,12 @@ export const styles = StyleSheet.create({
   },
   plans: {
     paddingHorizontal: Metrics.BASE_PADDING_HORIZONTAL,
-    marginTop: 20
+    marginTop: 24
   },
   plan: {
     flexDirection: 'row',
     alignItems: 'center',
-    marginTop: 10,
+    marginTop: 12,
     backgroundColor: 'rgba(255,255,255,0.05)',
     borderRadius: 15,
     paddingHorizontal: 15,
@@ -118,13 +118,13 @@ export const styles = StyleSheet.create({
     fontSize: 9,
     color: 'rgba(255,255,255,0.5)',
     textAlign: 'center',
-    marginTop: 10
+    marginTop: 12
   },
   terms: {
     fontSize: 11,
     color: 'rgba(255,255,255,0.5)',
     textAlign: 'center',
-    marginTop: 10
+    marginTop: 12
   },
   dot: {
     height: 22,

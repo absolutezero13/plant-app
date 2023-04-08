@@ -1,4 +1,5 @@
 import { Text as RNText, StyleSheet, TextProps } from 'react-native';
+import { colors } from '../theme/colors';
 
 const Text = (props: TextProps) => {
   return (
@@ -11,7 +12,8 @@ const Text = (props: TextProps) => {
 const styles = StyleSheet.create({
   defaultText: {
     fontSize: 17,
-    fontFamily: 'Rubik-Regular'
+    fontFamily: 'Rubik-Regular',
+    color: colors.primaryText
   }
 });
 
