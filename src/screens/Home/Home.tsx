@@ -1,4 +1,4 @@
-import { View } from 'react-native';
+import { ScrollView, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import Text from '../../components/Text';
 import { styles } from './Home.style';
@@ -6,6 +6,7 @@ import InputArea from './views/InputArea';
 import FreePremium from './views/FreePremium';
 import useHomeData from '../../hooks/useHomeData';
 import Questions from './views/Questions';
+import Categories from './views/Categories';
 
 const getTimeText = () => {
   const date = new Date();
@@ -29,14 +30,17 @@ const Home = () => {
   } = useHomeData();
 
   return (
-    <SafeAreaView style={styles.safeArea}>
-      <View style={styles.headerWrapper}>
-        <Text style={styles.headerTitle}>Hi, plant lover!</Text>
-        <Text style={styles.time}>{getTimeText()}</Text>
-      </View>
-      <InputArea />
-      <FreePremium />
-      <Questions questions={questions} questionsPending={questionsPending} />
+    <SafeAreaView style={styles.safeArea} edges={['top', 'left', 'right']}>
+      <ScrollView showsVerticalScrollIndicator={false}>
+        <View style={styles.headerWrapper}>
+          <Text style={styles.headerTitle}>Hi, plant lover!</Text>
+          <Text style={styles.time}>{getTimeText()}</Text>
+        </View>
+        <InputArea />
+        <FreePremium />
+        <Questions questions={questions} questionsPending={questionsPending} />
+        <Categories categories={categories} categoryPending={categoryPending} />
+      </ScrollView>
     </SafeAreaView>
   );
 };

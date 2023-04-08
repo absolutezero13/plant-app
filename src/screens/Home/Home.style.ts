@@ -9,7 +9,7 @@ const ASPECT_RATIO = ORIGINAL_IMAGE_WIDTH / ORIGINAL_IMAGE_HEIGHT;
 export const styles = StyleSheet.create({
   safeArea: {
     flex: 1,
-    backgroundColor: colors.white
+    backgroundColor: '#FBFAFA'
   },
   headerWrapper: {
     paddingHorizontal: Metrics.BASE_PADDING_HORIZONTAL,
@@ -116,5 +116,38 @@ export const styles = StyleSheet.create({
   },
   separator: {
     width: 10
+  },
+  categoryWrapper: {
+    width:
+      (Metrics.SCREEN_WIDTH - Metrics.BASE_PADDING_HORIZONTAL * 2 - 10) / 2,
+    backgroundColor: '#F4F6F6',
+    height: 140,
+    borderRadius: 10,
+    paddingHorizontal: 10,
+    paddingVertical: 10,
+    borderWidth: StyleSheet.hairlineWidth,
+    borderColor: 'rgba(41,187,137, 0.2)'
+  },
+  categoryImage: {
+    width: 120,
+    position: 'absolute',
+    right: 0,
+    bottom: 0,
+    borderBottomRightRadius: 10
+  },
+  categoryTitle: {
+    fontWeight: '500',
+    fontSize: 16
+  },
+  verticalSeparator: {
+    width: 1,
+    height: 10
+  },
+  categoryFlatList: {
+    marginTop: 20
+  },
+  categoryFlatListContentContainer: {
+    paddingHorizontal: Metrics.BASE_PADDING_HORIZONTAL,
+    paddingBottom: 40
   }
 });
