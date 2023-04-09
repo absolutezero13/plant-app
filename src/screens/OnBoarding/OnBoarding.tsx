@@ -10,10 +10,11 @@ import { onBoardingData } from '../../utils/uiData';
 import { styles } from './OnBoarding.style';
 import { OnBoardingData } from '../../utils/types';
 import Brush from '../../assets/images/brush.png';
+import { OnBoardingNavigationProp } from '../../router/types';
 
 const OnBoarding = () => {
   const flatListRef = useRef<FlatList>(null);
-  const navigation = useNavigation();
+  const navigation = useNavigation<OnBoardingNavigationProp>();
   const [step, setStep] = useState(0);
 
   useEffect(() => {

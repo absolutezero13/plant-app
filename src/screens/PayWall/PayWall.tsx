@@ -14,12 +14,13 @@ import { styles } from './PayWall.styles';
 import { FeatureCard } from './views/FeatureCard';
 import { Plan } from './views/Plan';
 import { STORAGE_KEYS, storage } from '../../providers/storage';
+import { RootNavigationProp } from '../../router/types';
 
 const disclaimer =
   'After the 3-day free trial period you’ll be charged ₺274.99 per year unless you cancel before the trial expires. Yearly Subscription is Auto-Renewable';
 
 const PayWall = () => {
-  const navigation = useNavigation();
+  const navigation = useNavigation<RootNavigationProp>();
   const [selectedPlan, setSelectedPlan] = useState(1);
 
   const Separator = () => {

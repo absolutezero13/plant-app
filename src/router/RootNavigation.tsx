@@ -6,8 +6,9 @@ import { TabStack } from './TabNavigator';
 import WebView from '../screens/WebView/WebView';
 import { colors } from '../theme/colors';
 import { STORAGE_KEYS, storage } from '../providers/storage';
+import { RootStackParamList } from './types';
 
-const Stack = createNativeStackNavigator();
+const Stack = createNativeStackNavigator<RootStackParamList>();
 
 const RootNavigation = () => {
   const userSeenOnBoarding = storage.getBoolean(

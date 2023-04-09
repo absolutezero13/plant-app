@@ -5,9 +5,10 @@ import InitialOnboarding from './../../assets/images/initial-onboarding.png';
 import { PrimaryButton } from '../../components/PrimaryButton';
 import OnBoardingContainer from '../../components/OnBoardingContainer';
 import { styles } from './Welcome.styles';
+import { RootNavigationProp } from '../../router/types';
 
 const Welcome = () => {
-  const navigation = useNavigation();
+  const navigation = useNavigation<RootNavigationProp>();
 
   return (
     <OnBoardingContainer>

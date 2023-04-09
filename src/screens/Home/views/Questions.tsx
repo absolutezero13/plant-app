@@ -10,6 +10,7 @@ import { Question } from '../../../redux/types';
 import { styles } from '../Home.style';
 import { useNavigation } from '@react-navigation/native';
 import { Loading } from '../../../components/Loading';
+import { RootNavigationProp } from '../../../router/types';
 
 interface QuestionsProps {
   questions: Question[];
@@ -17,7 +18,7 @@ interface QuestionsProps {
 }
 
 const Questions = ({ questions, questionsPending }: QuestionsProps) => {
-  const navigation = useNavigation();
+  const navigation = useNavigation<RootNavigationProp>();
 
   const renderItem = ({ item }: { item: Question }) => {
     return (
