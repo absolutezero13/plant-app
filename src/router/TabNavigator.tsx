@@ -9,12 +9,12 @@ import Home from '../screens/Home/Home';
 import { colors } from '../theme/colors';
 import Text from '../components/Text';
 
-const icons = {
-  Home: HomeIcon,
-  MyGarden,
-  Scanner,
-  Profile,
-  Diagnose: HealthCare
+const routes = {
+  Home: { icon: HomeIcon },
+  MyGarden: { icon: MyGarden, name: 'My Garden' },
+  Scanner: { icon: Scanner },
+  Profile: { icon: Profile },
+  Diagnose: { icon: HealthCare }
 };
 
 const Tab = createBottomTabNavigator();
@@ -30,13 +30,12 @@ function TabStack() {
               style={{
                 color: focused ? colors.main : '#BDBDBD',
                 fontSize: 10
-              }}
-            >
-              {route.name}
+              }}>
+              {routes[route.name].name || route.name}
             </Text>
           ) : null,
         tabBarIcon: ({ focused }) => {
-          const Icon = icons[route.name];
+          const Icon = routes[route.name].icon;
           const color = focused ? colors.main : '#BDBDBD';
 
           if (route.name !== 'Scanner') {
@@ -62,13 +61,12 @@ function TabStack() {
           );
         }
       })}
-      initialRouteName='Home'
-    >
-      <Tab.Screen name='Home' component={Home} />
-      <Tab.Screen name='Diagnose' component={Home} />
-      <Tab.Screen name='Scanner' component={Home} />
-      <Tab.Screen name='MyGarden' component={Home} />
-      <Tab.Screen name='Profile' component={Home} />
+      initialRouteName="Home">
+      <Tab.Screen name="Home" component={Home} />
+      <Tab.Screen name="Diagnose" component={Home} />
+      <Tab.Screen name="Scanner" component={Home} />
+      <Tab.Screen name="MyGarden" component={Home} />
+      <Tab.Screen name="Profile" component={Home} />
     </Tab.Navigator>
   );
 }
