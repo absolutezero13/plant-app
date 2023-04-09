@@ -15,19 +15,15 @@ const getTimeText = () => {
   if (hours < 12 && hours > 5) {
     return 'Good morning! ☀️';
   }
-  if (hours < 18) {
+  if (hours < 18 && hours > 12) {
     return 'Good afternoon! 🌥';
   }
   return 'Good evening! 🌙';
 };
 
 const Home = () => {
-  const {
-    categories,
-    categoryPending,
-    questions,
-    questionsPending
-  } = useHomeData();
+  const { categories, categoryPending, questions, questionsPending } =
+    useHomeData();
 
   return (
     <SafeAreaView style={styles.safeArea} edges={['top', 'left', 'right']}>
