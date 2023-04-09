@@ -9,6 +9,7 @@ import Text from '../../../components/Text';
 import { Question } from '../../../redux/types';
 import { styles } from '../Home.style';
 import { useNavigation } from '@react-navigation/native';
+import { Loading } from '../../../components/Loading';
 
 interface QuestionsProps {
   questions: Question[];
@@ -41,6 +42,13 @@ const Questions = ({ questions, questionsPending }: QuestionsProps) => {
   };
 
   const Separator = () => <View style={styles.separator} />;
+
+  if (questionsPending)
+    return (
+      <View style={styles.loading}>
+        <Loading />
+      </View>
+    );
 
   return (
     <View style={styles.questions}>

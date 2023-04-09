@@ -17,7 +17,7 @@ const RootNavigation = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator>
-        {false ? (
+        {userSeenOnBoarding ? (
           <Stack.Screen
             options={{
               headerShown: false,

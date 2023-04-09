@@ -4,6 +4,7 @@ import FastImage from 'react-native-fast-image';
 import { styles } from '../Home.style';
 import { Category } from '../../../redux/types';
 import Text from '../../../components/Text';
+import { Loading } from '../../../components/Loading';
 
 interface CategoryProps {
   categories: Category[];
@@ -18,6 +19,7 @@ const Categories = ({ categories, categoryPending }: CategoryProps) => {
     item: Category;
     index: number;
   }) => {
+    console.log('categoryPending', categoryPending);
     const aspectRatio = item.image.width / item.image.height;
 
     return (
@@ -45,6 +47,13 @@ const Categories = ({ categories, categoryPending }: CategoryProps) => {
   };
 
   const Separator = () => <View style={styles.verticalSeparator} />;
+
+  if (categoryPending)
+    return (
+      <View style={styles.loading}>
+        <Loading />
+      </View>
+    );
 
   return (
     <FlatList

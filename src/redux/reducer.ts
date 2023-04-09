@@ -2,7 +2,14 @@ import { PayloadAction } from '@reduxjs/toolkit';
 import constants from './contants';
 import { HomeState } from './types';
 
-const { GET_CATEGORIES, GET_QUESTIONS } = constants;
+const {
+  GET_CATEGORIES,
+  GET_QUESTIONS,
+  CATEGORIES_PENDING,
+  QUESTIONS_PENDING,
+  QUESTIONS_ERROR,
+  CATEGORIES_ERROR
+} = constants;
 
 const initialState = {
   categories: {
@@ -35,6 +42,38 @@ function reducer(state = initialState, action: PayloadAction) {
           data: action.payload,
           pending: false,
           error: null
+        }
+      };
+    case CATEGORIES_PENDING:
+      return {
+        ...state,
+        categories: {
+          ...state.categories,
+          pending: true
+        }
+      };
+    case QUESTIONS_PENDING:
+      return {
+        ...state,
+        questions: {
+          ...state.questions,
+          pending: true
+        }
+      };
+    case QUESTIONS_ERROR:
+      return {
+        ...state,
+        questions: {
+          ...state.questions,
+          error: action.payload
+        }
+      };
+    case CATEGORIES_ERROR:
+      return {
+        ...state,
+        categories: {
+          ...state.categories,
+          error: action.payload
         }
       };
     default:

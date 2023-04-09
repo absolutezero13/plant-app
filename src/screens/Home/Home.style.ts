@@ -149,5 +149,10 @@ export const styles = StyleSheet.create({
   categoryFlatListContentContainer: {
     paddingHorizontal: Metrics.BASE_PADDING_HORIZONTAL,
     paddingBottom: 40
+  },
+  loading: {
+    height: 200,
+    alignItems: 'center',
+    justifyContent: 'center'
   }
 });
