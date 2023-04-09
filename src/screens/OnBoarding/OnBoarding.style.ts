@@ -19,6 +19,7 @@ export const styles = StyleSheet.create({
   headerWrapper: {
     paddingHorizontal: Metrics.BASE_PADDING_HORIZONTAL,
     marginTop: 24
+    // width: '90%'
   },
   text: {
     fontWeight: '600',
@@ -34,6 +35,12 @@ export const styles = StyleSheet.create({
     justifyContent: 'flex-end',
     alignSelf: 'center',
     marginTop: 24
+  },
+  brush: {
+    width: 138,
+    height: 12,
+    position: 'absolute',
+    top: 42
   },
   dots: {
     flexDirection: 'row',

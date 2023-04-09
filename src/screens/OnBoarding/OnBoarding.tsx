@@ -1,6 +1,5 @@
-import { useCallback, useEffect, useRef, useState } from 'react';
-import { Image, ImageBackground, StyleSheet, Text, View } from 'react-native';
-import FastImage from 'react-native-fast-image';
+import { useEffect, useRef, useState } from 'react';
+import { Image, Text, View } from 'react-native';
 import { FlatList } from 'react-native-gesture-handler';
 import { useNavigation } from '@react-navigation/native';
 
@@ -10,7 +9,7 @@ import { Metrics } from '../../theme/metrics';
 import { onBoardingData } from '../../utils/uiData';
 import { styles } from './OnBoarding.style';
 import { OnBoardingData } from '../../utils/types';
-import LinearGradient from 'react-native-linear-gradient';
+import Brush from '../../assets/images/brush.png';
 
 const OnBoarding = () => {
   const flatListRef = useRef<FlatList>(null);
@@ -21,16 +20,31 @@ const OnBoarding = () => {
     flatListRef?.current?.scrollToIndex({ index: step });
   }, [step]);
 
-  const renderItem = ({ item }: { item: OnBoardingData }) => {
+  const renderItem = ({
+    item,
+    index
+  }: {
+    item: OnBoardingData;
+    index: number;
+  }) => {
     if (!item.image) return null;
     return (
       <View style={styles.item}>
         <View style={styles.headerWrapper}>
           <Text style={styles.text}>
             {item.titleStart}
-            <Text style={styles.textBold}>{item.titleBold} </Text>
+            <Text style={styles.textBold}>{item.titleBold}</Text>
             {item.titleEnd}
           </Text>
+          <Image
+            source={Brush}
+            style={[
+              styles.brush,
+              {
+                right: index === 0 ? 50 : 80
+              }
+            ]}
+          />
         </View>
         <Image source={item.image} style={styles.image} />
       </View>
