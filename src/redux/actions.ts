@@ -1,16 +1,16 @@
 import { Alert } from 'react-native';
-import { AnyAction, Dispatch } from 'redux';
 import axios from 'axios';
 import constants, { BASE_URL } from './contants';
+import { ThunkActionType, ThunkDispatchType } from './types';
 
-export const getCategories = () => {
-  return async (dispatch: Dispatch<AnyAction>) => {
+export const getCategories = (): ThunkActionType => {
+  return async (dispatch: ThunkDispatchType) => {
     try {
       dispatch({ type: constants.CATEGORIES_PENDING });
       const res = await axios.get(`${BASE_URL}/getCategories`);
       const categories = res.data.data;
 
-      return dispatch({ type: constants.GET_CATEGORIES, payload: categories });
+      dispatch({ type: constants.GET_CATEGORIES, payload: categories });
     } catch (error) {
       dispatch({
         type: constants.CATEGORIES_ERROR,
@@ -25,8 +25,8 @@ export const getCategories = () => {
   };
 };
 
-export const getQuestions = () => {
-  return async (dispatch: Dispatch<AnyAction>) => {
+export const getQuestions = (): ThunkActionType => {
+  return async (dispatch: ThunkDispatchType) => {
     try {
       dispatch({ type: constants.QUESTIONS_PENDING });
       const res = await axios.get(`${BASE_URL}/getQuestions`);

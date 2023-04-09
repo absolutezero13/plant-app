@@ -1,3 +1,6 @@
+import { AnyAction } from 'redux';
+import { ThunkDispatch } from 'redux-thunk';
+
 export interface Question {
   id: number;
   title: string;
@@ -40,3 +43,11 @@ export interface HomeState {
   questions: { data: Question[]; pending: boolean; error: any };
   categories: { data: Category[]; pending: boolean; error: any };
 }
+
+export type ThunkDispatchType = ThunkDispatch<HomeState, undefined, AnyAction>;
+export type ThunkActionType = ThunkDispatch<
+  Promise<void>,
+  HomeState,
+  undefined,
+  AnyAction
+>;

@@ -44,8 +44,7 @@ const RootNavigation = () => {
             />
             <Stack.Screen
               options={{
-                headerShown: false,
-                gestureEnabled: false
+                headerShown: false
               }}
               name='TabStack'
               component={TabStack}
