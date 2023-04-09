@@ -19,7 +19,6 @@ const Categories = ({ categories, categoryPending }: CategoryProps) => {
     item: Category;
     index: number;
   }) => {
-    console.log('categoryPending', categoryPending);
     const aspectRatio = item.image.width / item.image.height;
 
     return (
@@ -30,8 +29,7 @@ const Categories = ({ categories, categoryPending }: CategoryProps) => {
             marginLeft: index % 2 === 0 ? 0 : 10
           }
         ]}
-        activeOpacity={0.8}
-      >
+        activeOpacity={0.8}>
         <FastImage
           source={{ uri: item.image.url }}
           style={[
