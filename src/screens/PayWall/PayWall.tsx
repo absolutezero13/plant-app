@@ -82,7 +82,7 @@ const PayWall = () => {
             onPress={onCrossPress}
             title='Try Free For 3 Days'
             style={{
-              marginTop: 20
+              marginTop: 24
             }}
           />
           <Text style={styles.disclaimer}>{disclaimer}</Text>

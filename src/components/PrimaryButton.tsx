@@ -39,7 +39,7 @@ const styles = StyleSheet.create({
   button: {
     width: SCREEN_WIDTH - BASE_PADDING_HORIZONTAL * 2,
     alignSelf: 'center',
-    height: 55,
+    height: 56,
     alignItems: 'center',
     justifyContent: 'center',
     borderRadius: 12

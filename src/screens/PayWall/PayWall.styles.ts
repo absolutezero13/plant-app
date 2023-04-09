@@ -6,7 +6,7 @@ const ORIGINAL_IMAGE_HEIGHT = 1100;
 const ORIGINAL_IMAGE_WIDTH = 750;
 const ASPECT_RATIO = ORIGINAL_IMAGE_WIDTH / ORIGINAL_IMAGE_HEIGHT;
 
-const IMAGE_HEIGHT = Metrics.SCREEN_HEIGHT / 1.8;
+const IMAGE_HEIGHT = Metrics.SCREEN_HEIGHT / 1.85;
 
 export const styles = StyleSheet.create({
   safeArea: {
@@ -53,7 +53,7 @@ export const styles = StyleSheet.create({
     backgroundColor: 'rgba(255,255,255,0.08)',
     borderRadius: 15,
     width: Metrics.SCREEN_WIDTH / 2.5,
-    paddingTop: 10,
+    paddingTop: 12,
     paddingHorizontal: 20,
     paddingBottom: 20
   },
@@ -67,12 +67,12 @@ export const styles = StyleSheet.create({
     justifyContent: 'center'
   },
   separator: {
-    width: 10
+    width: 12
   },
   featureTitle: {
     color: colors.white,
     fontSize: 20,
-    marginTop: 10,
+    marginTop: 12,
     fontFamily: 'Rubik-Bold'
   },
   featureSubTitle: {
@@ -96,7 +96,7 @@ export const styles = StyleSheet.create({
     backgroundColor: 'rgba(255,255,255,0.05)',
     borderRadius: 15,
     paddingHorizontal: 15,
-    paddingVertical: 10
+    paddingVertical: 12
   },
   planTitle: {
     fontFamily: 'Rubik-SemiBold',
@@ -118,13 +118,13 @@ export const styles = StyleSheet.create({
     fontSize: 9,
     color: 'rgba(255,255,255,0.5)',
     textAlign: 'center',
-    marginTop: 12
+    marginTop: 8
   },
   terms: {
     fontSize: 11,
     color: 'rgba(255,255,255,0.5)',
     textAlign: 'center',
-    marginTop: 12
+    marginTop: 8
   },
   dot: {
     height: 22,
