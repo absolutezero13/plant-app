@@ -112,7 +112,9 @@ export const styles = StyleSheet.create({
   badge: {
     position: 'absolute',
     right: 0,
-    top: -1
+    top: -1,
+    width: 75,
+    height: 25
   },
   disclaimer: {
     fontSize: 9,
