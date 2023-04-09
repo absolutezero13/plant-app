@@ -38,12 +38,12 @@ const PayWall = () => {
   return (
     <>
       <ImageBackground
-        resizeMode='cover'
+        resizeMode="cover"
         source={PlantWithBg}
         style={styles.image}
       />
       <SafeAreaView style={styles.safeArea} edges={['top', 'left', 'right']}>
-        <Pressable onPress={onCrossPress} style={styles.cross}>
+        <Pressable hitSlop={20} onPress={onCrossPress} style={styles.cross}>
           <Cross
             style={{
               color: colors.white
@@ -81,7 +81,7 @@ const PayWall = () => {
           ))}
           <PrimaryButton
             onPress={onCrossPress}
-            title='Try Free For 3 Days'
+            title="Try Free For 3 Days"
             style={{
               marginTop: 24
             }}

@@ -17,49 +17,38 @@ const RootNavigation = () => {
 
   return (
     <NavigationContainer>
-      <Stack.Navigator>
-        {userSeenOnBoarding ? (
-          <Stack.Screen
-            options={{
-              headerShown: false,
-              gestureEnabled: false
-            }}
-            name='TabStack'
-            component={TabStack}
-          />
-        ) : (
-          <>
-            <Stack.Screen
-              options={{
-                headerShown: false
-              }}
-              name='Welcome'
-              component={Welcome}
-            />
-            <Stack.Screen
-              options={{
-                headerShown: false
-              }}
-              name='OnBoardingStack'
-              component={OnBoardingStack}
-            />
-            <Stack.Screen
-              options={{
-                headerShown: false
-              }}
-              name='TabStack'
-              component={TabStack}
-            />
-            <Stack.Screen
-              options={({ route }) => ({
-                headerTitle: route.params?.title,
-                headerTintColor: colors.main
-              })}
-              name='WebView'
-              component={WebView}
-            />
-          </>
-        )}
+      <Stack.Navigator
+        initialRouteName={userSeenOnBoarding ? 'TabStack' : 'Welcome'}>
+        <Stack.Screen
+          options={{
+            headerShown: false,
+            gestureEnabled: false
+          }}
+          name="TabStack"
+          component={TabStack}
+        />
+        <Stack.Screen
+          options={({ route }) => ({
+            headerTitle: route.params?.title,
+            headerTintColor: colors.main
+          })}
+          name="WebView"
+          component={WebView}
+        />
+        <Stack.Screen
+          options={{
+            headerShown: false
+          }}
+          name="Welcome"
+          component={Welcome}
+        />
+        <Stack.Screen
+          options={{
+            headerShown: false
+          }}
+          name="OnBoardingStack"
+          component={OnBoardingStack}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );
