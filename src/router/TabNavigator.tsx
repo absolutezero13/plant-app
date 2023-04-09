@@ -1,13 +1,15 @@
 import { StyleSheet, View } from 'react-native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import HomeIcon from '../assets/icons/home.svg';
-import MyGarden from '../assets/icons/my-garden.svg';
-import Scanner from '../assets/icons/scanner.svg';
-import Profile from '../assets/icons/profile.svg';
-import HealthCare from '../assets/icons/healthcare.svg';
-import Home from '../screens/Home/Home';
-import { colors } from '../theme/colors';
-import Text from '../components/Text';
+
+import Home from '@screens/Home/Home';
+import Text from '@components/Text';
+import { colors } from '@theme/colors';
+
+import HomeIcon from '@assets/icons/home.svg';
+import MyGarden from '@assets/icons/my-garden.svg';
+import Scanner from '@assets/icons/scanner.svg';
+import Profile from '@assets/icons/profile.svg';
+import HealthCare from '@assets/icons/healthcare.svg';
 
 const routes = {
   Home: { icon: HomeIcon },

@@ -4,11 +4,11 @@ import { FlatList } from 'react-native-gesture-handler';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 import { useNavigation } from '@react-navigation/native';
-import { Metrics } from '../../theme/metrics';
-import { colors } from '../../theme/colors';
-import { PrimaryButton } from '../../components/PrimaryButton';
-import PlantWithBg from '../../assets/images/plant-with-bg.png';
-import Cross from '../../assets/icons/cross.svg';
+import { Metrics } from '@theme/metrics';
+import { colors } from '@theme/colors';
+import { PrimaryButton } from '@components/PrimaryButton';
+import PlantWithBg from '@assets/images/plant-with-bg.png';
+import Cross from '@assets/icons/cross.svg';
 import { features, plans } from '../../utils/uiData';
 import { styles } from './PayWall.styles';
 import { FeatureCard } from './views/FeatureCard';

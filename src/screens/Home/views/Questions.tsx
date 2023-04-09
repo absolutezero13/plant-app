@@ -5,11 +5,11 @@ import {
   TouchableOpacity,
   View
 } from 'react-native';
-import Text from '../../../components/Text';
-import { Question } from '../../../redux/types';
-import { styles } from '../Home.style';
+import Text from '@components/Text';
+import { Question } from '@redux/types';
 import { useNavigation } from '@react-navigation/native';
-import { Loading } from '../../../components/Loading';
+import { Loading } from '@components/Loading';
+import { styles } from '../Home.style';
 import { RootNavigationProp } from '../../../router/types';
 
 interface QuestionsProps {
@@ -30,12 +30,10 @@ const Questions = ({ questions, questionsPending }: QuestionsProps) => {
           })
         }
         style={styles.questionContainer}
-        activeOpacity={0.8}
-      >
+        activeOpacity={0.8}>
         <ImageBackground
           source={{ uri: item.image_uri }}
-          style={styles.questionBg}
-        >
+          style={styles.questionBg}>
           <Text style={styles.questionText}>{item.title}</Text>
         </ImageBackground>
       </TouchableOpacity>

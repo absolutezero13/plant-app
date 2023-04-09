@@ -1,6 +1,6 @@
 import { StyleSheet, Text, TouchableOpacity } from 'react-native';
-import { colors } from '../theme/colors';
-import { Metrics } from '../theme/metrics';
+import { colors } from '@theme/colors';
+import { Metrics } from '@theme/metrics';
 
 interface PrimaryButtonProps {
   bgColor?: string;
@@ -26,8 +26,7 @@ const PrimaryButton = ({
         styles.button,
         { backgroundColor: bgColor || colors.main, ...style }
       ]}
-      activeOpacity={0.8}
-    >
+      activeOpacity={0.8}>
       <Text style={[styles.buttonText, { color: textColor || '#fff' }]}>
         {title}
       </Text>

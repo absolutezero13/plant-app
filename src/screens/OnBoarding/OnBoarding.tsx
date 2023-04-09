@@ -3,13 +3,13 @@ import { Image, Text, View } from 'react-native';
 import { FlatList } from 'react-native-gesture-handler';
 import { useNavigation } from '@react-navigation/native';
 
-import OnBoardingContainer from '../../components/OnBoardingContainer';
-import { PrimaryButton } from '../../components/PrimaryButton';
-import { Metrics } from '../../theme/metrics';
+import OnBoardingContainer from '@components/OnBoardingContainer';
+import { PrimaryButton } from '@components/PrimaryButton';
+import { Metrics } from '@theme/metrics';
+import Brush from '@assets/images/brush.png';
 import { onBoardingData } from '../../utils/uiData';
 import { styles } from './OnBoarding.style';
 import { OnBoardingData } from '../../utils/types';
-import Brush from '../../assets/images/brush.png';
 import { OnBoardingNavigationProp } from '../../router/types';
 
 const OnBoarding = () => {
@@ -69,11 +69,11 @@ const OnBoarding = () => {
         scrollEnabled={false}
         style={styles.flatList}
         // onViewableItemsChanged={onViewableItemsChanged}
-        decelerationRate='fast'
+        decelerationRate="fast"
         renderItem={renderItem}
       />
       <PrimaryButton
-        title='Continue'
+        title="Continue"
         onPress={() => {
           if (step === 1) {
             navigation.navigate('PayWall');

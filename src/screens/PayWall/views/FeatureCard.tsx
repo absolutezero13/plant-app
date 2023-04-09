@@ -1,7 +1,7 @@
 import { Text, View } from 'react-native';
 import { styles } from '../PayWall.styles';
+import { colors } from '@theme/colors';
 import { Feature } from '../../../utils/types';
-import { colors } from '../../../theme/colors';
 
 export const FeatureCard = ({ item }: { item: Feature }) => {
   const Icon = item.icon;

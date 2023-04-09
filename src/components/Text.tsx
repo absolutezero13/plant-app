@@ -1,5 +1,5 @@
 import { Text as RNText, StyleSheet, TextProps } from 'react-native';
-import { colors } from '../theme/colors';
+import { colors } from '@theme/colors';
 
 const Text = (props: TextProps) => {
   return (

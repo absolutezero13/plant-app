@@ -1,10 +1,11 @@
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
+
 import { OnBoardingStack } from './OnBoardingStack';
-import Welcome from '../screens/Welcome/Welcome';
+import Welcome from '@screens/Welcome/Welcome';
+import WebView from '@screens/WebView/WebView';
+import { colors } from '@theme/colors';
 import { TabStack } from './TabNavigator';
-import WebView from '../screens/WebView/WebView';
-import { colors } from '../theme/colors';
 import { STORAGE_KEYS, storage } from '../providers/storage';
 import { RootStackParamList } from './types';
 
@@ -17,8 +18,7 @@ const RootNavigation = () => {
 
   return (
     <NavigationContainer>
-      <Stack.Navigator
-        initialRouteName={userSeenOnBoarding ? 'TabStack' : 'Welcome'}>
+      <Stack.Navigator initialRouteName={userSeenOnBoarding ? 'TabStack' : 'Welcome'}>
         <Stack.Screen
           options={{
             headerShown: false,

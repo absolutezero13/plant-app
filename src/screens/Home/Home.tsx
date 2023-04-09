@@ -1,10 +1,11 @@
 import { ScrollView, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import Text from '../../components/Text';
+import Text from '@components/Text';
+import useHomeData from '@hooks/useHomeData';
+
 import { styles } from './Home.style';
 import InputArea from './views/InputArea';
 import FreePremium from './views/FreePremium';
-import useHomeData from '../../hooks/useHomeData';
 import Questions from './views/Questions';
 import Categories from './views/Categories';
 

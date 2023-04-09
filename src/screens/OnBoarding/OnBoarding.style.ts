@@ -1,6 +1,6 @@
 import { StyleSheet } from 'react-native';
-import { colors } from '../../theme/colors';
-import { Metrics } from '../../theme/metrics';
+import { colors } from '@theme/colors';
+import { Metrics } from '@theme/metrics';
 
 const ORIGINAL_IMAGE_HEIGHT = 1100;
 const ORIGINAL_IMAGE_WIDTH = 750;

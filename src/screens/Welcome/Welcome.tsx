@@ -1,9 +1,9 @@
 import { Image, Text, View } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 
-import InitialOnboarding from './../../assets/images/initial-onboarding.png';
-import { PrimaryButton } from '../../components/PrimaryButton';
-import OnBoardingContainer from '../../components/OnBoardingContainer';
+import InitialOnboarding from '@assets/images/initial-onboarding.png';
+import { PrimaryButton } from '@components/PrimaryButton';
+import OnBoardingContainer from '@components/OnBoardingContainer';
 import { styles } from './Welcome.styles';
 import { RootNavigationProp } from '../../router/types';
 
@@ -24,7 +24,7 @@ const Welcome = () => {
       <Image style={styles.image} source={InitialOnboarding} />
       <PrimaryButton
         onPress={() => navigation.navigate('OnBoardingStack')}
-        title='Get Started'
+        title="Get Started"
       />
       <Text style={styles.bottomText}>
         By tapping next, you are agreeing to PlantID

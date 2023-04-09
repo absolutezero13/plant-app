@@ -1,8 +1,8 @@
 import { Image, Pressable, StyleSheet, Text, View } from 'react-native';
-import { colors } from '../../../theme/colors';
+import { colors } from '@theme/colors';
+import badge from '@assets/images/badge.png';
+import { TPlan } from '@utils/types';
 import { styles } from '../PayWall.styles';
-import badge from '../../../assets/images/badge.png';
-import { TPlan } from '../../../utils/types';
 
 interface PlanProps {
   item: TPlan;
@@ -30,8 +30,7 @@ export const Plan = ({ item, selectedPlan, setSelectedPlan }: PlanProps) => {
           borderColor: dynamicStyles.borderColor
         }
       ]}
-      key={item.title}
-    >
+      key={item.title}>
       {item.badge && <Image source={badge} style={styles.badge} />}
       <View
         style={[
@@ -39,8 +38,7 @@ export const Plan = ({ item, selectedPlan, setSelectedPlan }: PlanProps) => {
           {
             backgroundColor: dynamicStyles.backgroundColor
           }
-        ]}
-      >
+        ]}>
         <View
           style={[
             styles.whiteDot,
@@ -53,8 +51,7 @@ export const Plan = ({ item, selectedPlan, setSelectedPlan }: PlanProps) => {
       <View
         style={{
           marginLeft: 10
-        }}
-      >
+        }}>
         <Text style={styles.planTitle}>{item.title}</Text>
         <Text style={styles.planDesc}>{item.description}</Text>
       </View>

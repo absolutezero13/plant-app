@@ -1,10 +1,10 @@
 import { FlatList, TouchableOpacity, View } from 'react-native';
 import FastImage from 'react-native-fast-image';
 
+import { Category } from '@redux/types';
+import Text from '@components/Text';
+import { Loading } from '@components/Loading';
 import { styles } from '../Home.style';
-import { Category } from '../../../redux/types';
-import Text from '../../../components/Text';
-import { Loading } from '../../../components/Loading';
 
 interface CategoryProps {
   categories: Category[];
