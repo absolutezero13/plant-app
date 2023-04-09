@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { Image, ImageBackground, StyleSheet, Text, View } from 'react-native';
 import FastImage from 'react-native-fast-image';
 import { FlatList } from 'react-native-gesture-handler';
 import { useNavigation } from '@react-navigation/native';
@@ -10,6 +10,7 @@ import { Metrics } from '../../theme/metrics';
 import { onBoardingData } from '../../utils/uiData';
 import { styles } from './OnBoarding.style';
 import { OnBoardingData } from '../../utils/types';
+import LinearGradient from 'react-native-linear-gradient';
 
 const OnBoarding = () => {
   const flatListRef = useRef<FlatList>(null);
@@ -31,7 +32,7 @@ const OnBoarding = () => {
             {item.titleEnd}
           </Text>
         </View>
-        <FastImage source={item.image} style={styles.image} />
+        <Image source={item.image} style={styles.image} />
       </View>
     );
   };
@@ -56,7 +57,6 @@ const OnBoarding = () => {
         decelerationRate='fast'
         renderItem={renderItem}
       />
-
       <PrimaryButton
         title='Continue'
         onPress={() => {

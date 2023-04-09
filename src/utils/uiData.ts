@@ -11,16 +11,13 @@ export const onBoardingData = [
     titleStart: 'Take a photo to ',
     titleBold: 'identify',
     titleEnd: ' the plant!',
-    image: Onboarding1,
-    onPress: () => {}
+    image: Onboarding1
   },
   {
     id: 1,
     titleStart: 'Get plant ',
     titleBold: 'care guides',
-    titleEnd: ' and tips!',
-    image: Onboarding2,
-    onPress: () => {}
+    image: Onboarding2
   },
   {
     id: 2

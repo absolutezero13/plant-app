@@ -6,31 +6,34 @@ const ORIGINAL_IMAGE_HEIGHT = 1100;
 const ORIGINAL_IMAGE_WIDTH = 750;
 const ASPECT_RATIO = ORIGINAL_IMAGE_WIDTH / ORIGINAL_IMAGE_HEIGHT;
 const IMAGE_HEIGHT = Metrics.SCREEN_HEIGHT / 1.5;
+const IMAGE_WIDTH = IMAGE_HEIGHT * ASPECT_RATIO;
 
 export const styles = StyleSheet.create({
   flatList: {
     flexGrow: 0
   },
   item: {
-    width: Metrics.SCREEN_WIDTH
+    width: Metrics.SCREEN_WIDTH,
+    flex: 1
   },
   headerWrapper: {
     paddingHorizontal: Metrics.BASE_PADDING_HORIZONTAL,
     marginTop: 24
   },
   text: {
-    fontFamily: 'Rubik-SemiBold',
+    fontWeight: '600',
     color: colors.primaryText,
     fontSize: 28
   },
   textBold: {
-    fontFamily: 'Rubik-Bold'
+    fontWeight: '900'
   },
   image: {
-    justifyContent: 'flex-end',
     height: IMAGE_HEIGHT,
-    aspectRatio: ASPECT_RATIO,
-    alignSelf: 'center'
+    width: IMAGE_WIDTH,
+    justifyContent: 'flex-end',
+    alignSelf: 'center',
+    marginTop: 24
   },
   dots: {
     flexDirection: 'row',

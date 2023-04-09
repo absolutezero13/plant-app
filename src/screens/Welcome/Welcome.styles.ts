@@ -2,8 +2,8 @@ import { StyleSheet } from 'react-native';
 import { Metrics } from '../../theme/metrics';
 import { colors } from '../../theme/colors';
 
-const ORIGINAL_IMAGE_HEIGHT = 500;
-const ORIGINAL_IMAGE_WIDTH = 375;
+const ORIGINAL_IMAGE_HEIGHT = 1095;
+const ORIGINAL_IMAGE_WIDTH = 750;
 const ASPECT_RATIO = ORIGINAL_IMAGE_WIDTH / ORIGINAL_IMAGE_HEIGHT;
 const HEIGHT_REDUCTION_RATIO = 1.6;
 
@@ -28,14 +28,15 @@ export const styles = StyleSheet.create({
     fontSize: 28
   },
   textBold: {
-    fontFamily: 'Rubik-Bold'
+    fontWeight: '600'
   },
   description: {
     fontFamily: 'Rubik-Regular',
     color: '#13231BB3',
     fontSize: 16,
     marginTop: 12,
-    lineHeight: 22
+    lineHeight: 22,
+    width: '90%'
   },
   bottomText: {
     fontFamily: 'Rubik-Regular',

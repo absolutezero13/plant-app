@@ -39,10 +39,10 @@ const styles = StyleSheet.create({
   button: {
     width: SCREEN_WIDTH - BASE_PADDING_HORIZONTAL * 2,
     alignSelf: 'center',
-    height: 60,
+    height: 55,
     alignItems: 'center',
     justifyContent: 'center',
-    borderRadius: 15
+    borderRadius: 12
   },
   buttonText: {
     fontFamily: 'Rubik-Bold',

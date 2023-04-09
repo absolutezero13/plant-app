@@ -8,6 +8,7 @@ import { styles } from './Welcome.styles';
 
 const Welcome = () => {
   const navigation = useNavigation();
+
   return (
     <OnBoardingContainer>
       <View style={styles.headerWrapper}>

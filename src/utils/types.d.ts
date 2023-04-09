@@ -4,7 +4,6 @@ export interface OnBoardingData {
   titleBold?: string;
   titleEnd?: string;
   image?: ImageSourcePropType;
-  onPress?: () => void;
 }
 
 export interface Feature {
