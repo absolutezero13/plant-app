@@ -1,4 +1,4 @@
-import { Pressable, View } from 'react-native';
+import { Alert, Pressable, View } from 'react-native';
 import { LinearGradientText } from 'react-native-linear-gradient-text';
 import Text from '@components/Text';
 
@@ -7,8 +7,12 @@ import Arrow from '@assets/icons/arrow.svg';
 import { styles } from '../Home.style';
 
 const FreePremium = () => {
+  const onPress = () => {
+    Alert.alert("Upgraded to Hubx plan. You're now a premium member!");
+  };
+
   return (
-    <Pressable style={styles.freeContainer}>
+    <Pressable onPress={onPress} style={styles.freeContainer}>
       <View>
         <Notification />
         <View style={styles.notificationCount}>
