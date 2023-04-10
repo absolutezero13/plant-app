@@ -11,7 +11,7 @@ export const getCategories = (): ThunkActionType => {
       const categories = res.data.data;
 
       dispatch({ type: constants.GET_CATEGORIES, payload: categories });
-    } catch (error) {
+    } catch (error: any) {
       dispatch({
         type: constants.CATEGORIES_ERROR,
         payload: {
@@ -33,7 +33,7 @@ export const getQuestions = (): ThunkActionType => {
       const questions = res.data;
 
       return dispatch({ type: constants.GET_QUESTIONS, payload: questions });
-    } catch (error) {
+    } catch (error: any) {
       dispatch({
         type: constants.QUESTIONS_ERROR,
         payload: {

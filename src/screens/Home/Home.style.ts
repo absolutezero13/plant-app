@@ -13,7 +13,7 @@ export const styles = StyleSheet.create({
   },
   headerWrapper: {
     paddingHorizontal: Metrics.BASE_PADDING_HORIZONTAL,
-    paddingTop: 10
+    paddingTop: 12
   },
   headerTitle: {
     fontSize: 16
@@ -34,7 +34,7 @@ export const styles = StyleSheet.create({
     borderRadius: 10,
     padding: 10,
     paddingLeft: 50,
-    marginTop: 20,
+    marginTop: 24,
     fontSize: 15,
     borderWidth: StyleSheet.hairlineWidth,
     borderColor: 'rgba(60,60,67,0.25))',
@@ -99,11 +99,11 @@ export const styles = StyleSheet.create({
     color: colors.white,
     fontWeight: '400',
     fontSize: 15,
-    marginLeft: 10,
+    marginLeft: 12,
     marginTop: 'auto'
   },
   questions: {
-    marginTop: 20
+    marginTop: 24
   },
   questionMl: {
     marginLeft: Metrics.BASE_PADDING_HORIZONTAL
@@ -141,14 +141,14 @@ export const styles = StyleSheet.create({
   },
   verticalSeparator: {
     width: 1,
-    height: 10
+    height: 12
   },
   categoryFlatList: {
     marginTop: 20
   },
   categoryFlatListContentContainer: {
     paddingHorizontal: Metrics.BASE_PADDING_HORIZONTAL,
-    paddingBottom: 40
+    paddingBottom: 48
   },
   loading: {
     height: 200,

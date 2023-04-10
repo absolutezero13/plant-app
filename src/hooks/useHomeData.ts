@@ -1,9 +1,9 @@
+import { useEffect } from 'react';
+import { AnyAction } from 'redux';
 import { useDispatch, useSelector } from 'react-redux';
 import { HomeState } from '@redux/types';
 import { getCategories, getQuestions } from '@redux/actions';
-import { useEffect } from 'react';
 import { ThunkDispatch } from 'redux-thunk';
-import { AnyAction } from 'redux';
 
 type TAppReducer = {
   appReducer: HomeState;

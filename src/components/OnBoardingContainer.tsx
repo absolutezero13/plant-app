@@ -1,8 +1,8 @@
-import { colors } from '@theme/colors';
 import { ReactNode } from 'react';
 import { StyleSheet } from 'react-native';
-import LinearGradient from 'react-native-linear-gradient';
 import { SafeAreaView } from 'react-native-safe-area-context';
+import LinearGradient from 'react-native-linear-gradient';
+import { colors } from '@theme/colors';
 
 const OnBoardingContainer = ({ children }: { children: ReactNode }) => (
   <LinearGradient

@@ -17,7 +17,7 @@ const routes = {
   Scanner: { icon: Scanner },
   Profile: { icon: Profile },
   Diagnose: { icon: HealthCare }
-};
+} as { [key: string]: { icon: any; name?: string } };
 
 const Tab = createBottomTabNavigator();
 

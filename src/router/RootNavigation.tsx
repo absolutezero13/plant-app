@@ -18,7 +18,8 @@ const RootNavigation = () => {
 
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName={userSeenOnBoarding ? 'TabStack' : 'Welcome'}>
+      <Stack.Navigator
+        initialRouteName={userSeenOnBoarding ? 'TabStack' : 'Welcome'}>
         <Stack.Screen
           options={{
             headerShown: false,
