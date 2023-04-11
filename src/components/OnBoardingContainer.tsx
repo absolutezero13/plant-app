@@ -9,9 +9,7 @@ const OnBoardingContainer = ({ children }: { children: ReactNode }) => (
     start={{ x: 0, y: 0 }}
     end={{ x: 1, y: 0 }}
     colors={[colors.white, colors.white, '#C0F0FF1A']}
-    style={{
-      flex: 1
-    }}>
+    style={styles.wrapper}>
     <SafeAreaView style={styles.wrapper}>{children}</SafeAreaView>
   </LinearGradient>
 );
